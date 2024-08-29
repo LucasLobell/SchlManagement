@@ -66,14 +66,14 @@
 }
 
 .rbc-day-slot {
-  font-size: 14px !important;
+  font-size: 12px !important;
 }
 
 .rbc-event {
   border: none !important;
   color: black !important;
-  padding: 10px !important;
-  margin: 10px !important;
+  padding: 6px !important;
+  margin: 6px !important;
   width: 99% !important;
 }
 
@@ -105,4 +105,66 @@
 .rbc-event-label{
   color: gray !important;
   margin-bottom: 5px;
+}
+
+.rbc-event-content{
+  padding: 0px 0px 0px 1px !important;
+}
+
+.custom-current-time-indicator {
+  position: relative;
+  height: 2px;
+  background-color: orange;
+}
+
+.time-label {
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  background-color: orange;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.rbc-current-time-indicator{
+  display: none;
+}
+
+.custom-current-time-indicator {
+  position: absolute;
+  top: 50%; /* Adjust this to match your current time */
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: orange;
+  z-index: 10; /* Ensure it appears above calendar content */
+}
+
+.custom-current-time-indicator .time-label {
+  position: absolute;
+  top: -9px; /* Position above the line */
+  left: 2px;
+  background-color: orange;
+  color: white;
+  padding: 2px 3px;
+  border-radius: 3px;
+  font-size: 10px;
+  z-index: 20; /* Ensure it's above the line */
+}
+
+
+@media (min-width: 1320px) and (max-width: 1380px) {
+  .rbc-event {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  .rbc-event-label {
+    font-size: 8px !important;
+    margin-bottom: 3px !important;
+  }
+  .rbc-event-content {
+    font-size: 11px !important;
+  }
 }
